@@ -41,21 +41,21 @@ class _AmountPageState extends State<AmountPage> {
             children: [
               //TO
               Card(color: Colors.white, elevation: 2, child: Column(children: [
-                Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12,8,12,4), child: Text("To", style: AppTheme.ntitleText,),))],),
+                const Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12,8,12,4), child: Text("To", style: AppTheme.ntitleText,),))],),
                 Padding(padding: const EdgeInsets.fromLTRB(24, 12, 12, 12), child: Row(children: [
                   Image.asset("assets/user.png", height: 50, width: 50, fit: BoxFit.fitWidth,),
                   const SizedBox(width: 12,),
-                  Expanded(child: Column(children: [
-                    Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("Ryan Reynolds", style: AppTheme.ntitleText, textAlign: TextAlign.start,),)),
+                  const Expanded(child: Column(children: [
+                    Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("K.M. Zabir Tarique", style: AppTheme.ntitleText, textAlign: TextAlign.start,),)),
                     ],),
-                    Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("01123456789", style: AppTheme.nbodyText, textAlign: TextAlign.start,),))],),
+                    Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("0171245689", style: AppTheme.nbodyText, textAlign: TextAlign.start,),))],),
                   ],)),
                 ],),)
               ],),),
 
               //Amount
               Card(color: Colors.white, elevation: 2, child: Column(children: [
-                Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12,8,12,4), child: Text("Amount", style: AppTheme.ntitleText,),))],),
+                const Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12,8,12,4), child: Text("Amount", style: AppTheme.ntitleText,),))],),
                 Padding(padding: const EdgeInsets.fromLTRB(24, 12, 12, 12), child: Row(children: [
                   const Icon(Icons.arrow_forward, color: Colors.transparent,),
                   Expanded(child: TextField(
@@ -85,7 +85,7 @@ class _AmountPageState extends State<AmountPage> {
                     );
                   }, child: Icon(Icons.arrow_forward, color: amtConfirmColor, size: 32,),)
                 ],),),
-                Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12,8,0,12), child: Text("Available balance: ৳7500.25", style: AppTheme.avlAmtText2, textAlign: TextAlign.center,),)),
+                const Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12,8,0,12), child: Text("Available balance: ৳7500.25", style: AppTheme.avlAmtText2, textAlign: TextAlign.center,),)),
                 ],),
               ],),),
 
@@ -95,17 +95,17 @@ class _AmountPageState extends State<AmountPage> {
                 elevation: 2,
                 child: SizedBox(
                   width: Size.infinite.width,
-                  child: Column(
+                  child: const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(children: const [ Expanded(child: Text('Select your purpose')), ],),
+                        padding: EdgeInsets.all(8.0),
+                        child: Row(children: [ Expanded(child: Text('Select your purpose')), ],),
                       ),
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
-                          children: const [
+                          children: [
                             Card(elevation: 2, margin: EdgeInsets.all(8.0), color: Colors.white, child: PurposeWidget(
                               title: 'Send Money',
                               image: 'assets/send_money.jpg',),),

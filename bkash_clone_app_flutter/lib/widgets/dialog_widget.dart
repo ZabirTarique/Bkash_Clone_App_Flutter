@@ -31,36 +31,36 @@ class DialogWidget extends StatelessWidget {
           margin: const EdgeInsets.fromLTRB(12, 0, 12, 0),
           child: SingleChildScrollView(
             child: Column(children: [
-              Row(children: const [Padding(padding: EdgeInsets.fromLTRB(12,8,4,24), child: Text("Confirm to ", style: AppTheme.dialogconfirmText,),), Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0,8,12,24), child: Text("Send Money", style: AppTheme.dialogconfirmTextBold,),))],),
+              const Row(children: [Padding(padding: EdgeInsets.fromLTRB(12,8,4,24), child: Text("Confirm to ", style: AppTheme.dialogconfirmText,),), Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0,8,12,24), child: Text("Send Money", style: AppTheme.dialogconfirmTextBold,),))],),
 
               Padding(padding: const EdgeInsets.fromLTRB(18, 12, 12, 24), child: Row(children: [
                 Image.asset("assets/user.png", height: 40, width: 40, fit: BoxFit.fitWidth,),
                 const SizedBox(width: 12,),
-                Expanded(child: Column(children: [
-                  Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("Ryan Reynolds", style: AppTheme.ntitleText, textAlign: TextAlign.start,),)),
+                const Expanded(child: Column(children: [
+                  Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("Ryan Reynolds", style: AppTheme.ntitleText, textAlign: TextAlign.start,),)),
                   ],),
-                  Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("01123456789", style: AppTheme.nbodyText, textAlign: TextAlign.start,),))],),
+                  Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("01123456789", style: AppTheme.nbodyText, textAlign: TextAlign.start,),))],),
                 ],)),
               ],),),
 
               Container(color: Colors.black12, width: double.infinity, height: 1,),
               Padding(padding: const EdgeInsets.fromLTRB(0, 12, 0, 12), child: Row(children: [
-                Expanded(child: Padding(padding: const EdgeInsets.all(8), child: Column(children: const [
+                const Expanded(child: Padding(padding: EdgeInsets.all(8), child: Column(children: [
                   Text('Total'), SizedBox(height: 4,), Text('৳ 505.00')
                 ],),)),
                 Container(color: Colors.black12, width: 1, height: 50,),
-                Expanded(child: Padding(padding: const EdgeInsets.all(8), child: Column(children: const [
+                const Expanded(child: Padding(padding: EdgeInsets.all(8), child: Column(children: [
                   Text('New Balance'), SizedBox(height: 4,),  Text('৳ 6995.25')
                 ],),)),
               ],),),
 
               Container(color: Colors.black12, width: double.infinity, height: 1,),
               Padding(padding: const EdgeInsets.fromLTRB(0, 12, 0, 12), child: Row(children: [
-                Expanded(child: Padding(padding: const EdgeInsets.all(8), child: Column(children: const [
+                const Expanded(child: Padding(padding: EdgeInsets.all(8), child: Column(children: [
                   Text('Reference'), SizedBox(height: 4,), Text('N/A')
                 ],),)),
                 Container(color: Colors.black12, width: 1, height: 50,),
-                Expanded(child: Padding(padding: const EdgeInsets.all(8), child: Column(children: const [
+                const Expanded(child: Padding(padding: EdgeInsets.all(8), child: Column(children: [
                   Text(''), SizedBox(height: 4,),  Text('')
                 ],),)),
               ],),),

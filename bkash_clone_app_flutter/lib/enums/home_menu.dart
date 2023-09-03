@@ -7,8 +7,8 @@ import '../widgets/send_money_widget.dart';
 enum HomeMenu {
   //top menu
   sendMoney('Send Money', 'assets/send_money.jpg', SendMoneyWidget()),
+  mobileRecharge('Mobile Recharge', 'assets/mobile_recharge.jpg', Text(AppText.placeholder)),
   cashOut('Cash Out', 'assets/cash_out.jpg', Text(AppText.placeholder)),
-  topUp('Top-up', 'assets/mobile_recharge.jpg', Text(AppText.placeholder)),
   payment('Payment', 'assets/make_payment.jpg', Text(AppText.placeholder)),
 
   addMoney('Add Money', 'assets/add_money.jpg', Text(AppText.placeholder)),

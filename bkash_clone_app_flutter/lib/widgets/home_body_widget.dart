@@ -7,6 +7,7 @@ import '../pages/details_page.dart';
 import '../styles/AppTheme.dart';
 import 'appbar_widget.dart';
 import 'card_widget.dart';
+import 'drawer_widget.dart';
 import 'home_menu_widget.dart';
 import 'offer_widget.dart';
 
@@ -27,8 +28,8 @@ class HomeBodyWidget extends StatelessWidget {
 
     List<HomeMenu> homeMenuList = [
       HomeMenu.sendMoney,
+      HomeMenu.mobileRecharge,
       HomeMenu.cashOut,
-      HomeMenu.topUp,
       HomeMenu.payment,
 
       HomeMenu.addMoney,
@@ -38,7 +39,7 @@ class HomeBodyWidget extends StatelessWidget {
     ];
 
     List<HomeMenu> mybKashList = [
-      HomeMenu.topUp,
+      HomeMenu.mobileRecharge,
       HomeMenu.shwapno,
       HomeMenu.internet,
       HomeMenu.card,
@@ -60,6 +61,7 @@ class HomeBodyWidget extends StatelessWidget {
         preferredSize: Size.fromHeight(80.0),
         child: AppBarWidget(),
       ),
+      endDrawer: const DrawerWidget(),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
@@ -212,17 +214,17 @@ class HomeBodyWidget extends StatelessWidget {
               margin: const EdgeInsets.only(left: 12.0, right: 12.0, bottom: 12.0),
               child: SizedBox(
                 width: Size.infinite.width,
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(children: const [Expanded(child: Text('Offers')), Text('See All', style: AppTheme.homeHintText,)],),
+                      padding: EdgeInsets.all(8.0),
+                      child: Row(children: [Expanded(child: Text('Offers')), Text('See All', style: AppTheme.homeHintText,)],),
                     ),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
-                        children: const [
+                        children: [
                           Card(elevation: 2, margin: EdgeInsets.all(8.0), color: Colors.white, child: OfferWidget(
                             title: '70tk Discount',
                             image: 'assets/bkash_panda.jpg',

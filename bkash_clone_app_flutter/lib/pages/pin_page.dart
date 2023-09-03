@@ -40,33 +40,33 @@ class _PinPageState extends State<PinPage> {
             children: [
               //TO
               Card(color: Colors.white, elevation: 2, child: Column(children: [
-                Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12,8,12,4), child: Text("To", style: AppTheme.ntitleText,),))],),
+                const Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12,8,12,4), child: Text("To", style: AppTheme.ntitleText,),))],),
                 Padding(padding: const EdgeInsets.fromLTRB(24, 12, 12, 12), child: Row(children: [
                   Image.asset("assets/user.png", height: 50, width: 50, fit: BoxFit.fitWidth,),
                   const SizedBox(width: 12,),
-                  Expanded(child: Column(children: [
-                    Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("Ryan Reynolds", style: AppTheme.ntitleText, textAlign: TextAlign.start,),)),
+                  const Expanded(child: Column(children: [
+                    Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("K.M. Zabir Tarique", style: AppTheme.ntitleText, textAlign: TextAlign.start,),)),
                     ],),
-                    Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("01123456789", style: AppTheme.nbodyText, textAlign: TextAlign.start,),))],),
+                    Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("01712345689", style: AppTheme.nbodyText, textAlign: TextAlign.start,),))],),
                   ],)),
                 ],),)
               ],),),
 
               //Amount
               Card(color: Colors.white, elevation: 2, child: Column(children: [
-                Padding(padding: const EdgeInsets.fromLTRB(0, 12, 0, 12), child: Row(children: [
-                  Expanded(child: Padding(padding: const EdgeInsets.all(8), child: Column(children: const [
+                const Padding(padding: EdgeInsets.fromLTRB(0, 12, 0, 12), child: Row(children: [
+                  Expanded(child: Padding(padding: EdgeInsets.all(8), child: Column(children: [
                     Text('Amount'), SizedBox(height: 4,), Text('৳ 500.00')
                   ],),)),
-                  Expanded(child: Padding(padding: const EdgeInsets.all(8), child: Column(children: const [
+                  Expanded(child: Padding(padding: EdgeInsets.all(8), child: Column(children: [
                     Text('Charge'), SizedBox(height: 4,),  Text('+ ৳ 5.00')
                   ],),)),
-                  Expanded(child: Padding(padding: const EdgeInsets.all(8), child: Column(children: const [
+                  Expanded(child: Padding(padding: EdgeInsets.all(8), child: Column(children: [
                     Text('Total'), SizedBox(height: 4,),  Text('৳ 505.00')
                   ],),))
                 ],),),
                 Container(width: double.infinity, height: 1, color: Colors.black12,),
-                Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12,12,12,8), child: Text("Reference", style: AppTheme.ntitleText,),)), Padding(padding: EdgeInsets.fromLTRB(0, 0, 12, 0), child: Text("0/50",),)],),
+                const Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12,12,12,8), child: Text("Reference", style: AppTheme.ntitleText,),)), Padding(padding: EdgeInsets.fromLTRB(0, 0, 12, 0), child: Text("0/50",),)],),
                 Padding(padding: const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 16.0), child: TextField(
                   controller: referenceTextController,
                   keyboardType: TextInputType.text,

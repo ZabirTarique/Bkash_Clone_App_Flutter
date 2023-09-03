@@ -18,11 +18,11 @@ class DrawerWidget extends StatelessWidget {
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: [
-          DrawerHeader(
+          const DrawerHeader(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
               Text("bKash Menu", style: AppTheme.titleText, textAlign: TextAlign.start,),
               SizedBox(height: 8,),
               Text("Language - English", style: AppTheme.subtitleText, textAlign: TextAlign.start,)

@@ -1,3 +1,4 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:bkash_clone_app_flutter/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,10 +16,17 @@ class MyApp extends StatelessWidget {
       title: 'bKash',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
         primarySwatch: Colors.pink,
       ),
-      home: const MyHomePage(title: 'bKash'),
+      home: AnimatedSplashScreen(
+        duration: 3000,
+        //splash: Icons.home,
+        splash: 'assets/fly2.png',
+        nextScreen: const MyHomePage(title: 'bKash'),
+        splashTransition: SplashTransition.fadeTransition,
+        //pageTransitionType: PageTransitionType.scale,
+        backgroundColor: Colors.pink),
+      //home: const MyHomePage(title: 'bKash'),
     );
   }
 }

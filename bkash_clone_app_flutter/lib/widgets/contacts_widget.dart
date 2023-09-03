@@ -31,13 +31,13 @@ class ContactsWidget extends StatelessWidget {
             final item = list[index];
 
             if(index == 0){
-              return Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12, 4, 0, 4),child: Text("My account", style: AppTheme.ntitleText,),))],);
+              return const Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12, 4, 0, 4),child: Text("My account", style: AppTheme.ntitleText,),))],);
             }
             else if(index == 2){
-              return Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12, 4, 0, 4),child: Text("Recents", style: AppTheme.ntitleText,),))],);
+              return const Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12, 4, 0, 4),child: Text("Recents", style: AppTheme.ntitleText,),))],);
             }
             else if(index == 5){
-              return Row(children: const [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12, 4, 0, 4),child: Text("All contacts", style: AppTheme.ntitleText,),))],);
+              return const Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(12, 4, 0, 4),child: Text("All contacts", style: AppTheme.ntitleText,),))],);
             }
             else {
               return InkWell(onTap: () {
