@@ -20,6 +20,7 @@ class _CashOutWidgetState extends State<CashOutWidget> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white,
           toolbarHeight: 2,
           automaticallyImplyLeading: false,
           // centerTitle: true,
@@ -31,10 +32,31 @@ class _CashOutWidgetState extends State<CashOutWidget> {
           //         width: 34, height: 34, child: Image.asset('assets/logo.png')),
           //   )
           // ],
-          bottom: const TabBar(
+          bottom:   const TabBar(
+
+            //padding: EdgeInsets.all(8),
+            indicatorColor: Colors.pink,
             tabs: [
-              Tab(text: "Agent",icon: Icon(Icons.account_balance_outlined),),
-              Tab(text: "ATM",icon: Icon(Icons.ad_units),),
+              Tab( child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.account_balance_outlined,color: Colors.pink,),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text("Agent",style: TextStyle(color: Colors.pink),),
+                  ),
+                ],
+              )),
+              Tab( child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.ad_units,color: Colors.pink,),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text("ATM",style: TextStyle(color: Colors.pink),),
+                  ),
+                ],
+              )),
             ],
           ),
         ),

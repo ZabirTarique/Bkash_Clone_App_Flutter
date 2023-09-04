@@ -26,7 +26,7 @@ class DrawerWidget extends StatelessWidget {
               children: [
               const Text("bKash Menu", style: AppTheme.titleText, textAlign: TextAlign.start,),
               const SizedBox(height: 32,),
-                CommonRoundedButton(buttonLabel: 'বাংলা',onPressed: (){},),
+                DrawerRoundedButton(buttonLabel: 'বাংলা',onPressed: (){}),
              // const Text("Language - English", style: AppTheme.subtitleText, textAlign: TextAlign.start,)
             ],),
           ),

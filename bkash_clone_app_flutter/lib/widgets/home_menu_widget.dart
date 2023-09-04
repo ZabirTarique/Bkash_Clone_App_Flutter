@@ -21,8 +21,8 @@ class MenuWidget extends StatelessWidget {
           Image.asset(image),
           const SizedBox(height: 5.0),
           Text(title,
-              style: const TextStyle(color: Colors.black45),
-              overflow: TextOverflow.ellipsis),
+              style: const TextStyle(color: Colors.black45,fontSize: 12),
+              overflow: TextOverflow.ellipsis,),
         ],
       ),
     );

@@ -20,7 +20,7 @@ class CardWidget extends StatelessWidget {
           SizedBox(height: 50, child: Image.asset(image)),
           const SizedBox(height: 5.0),
           Text(title,
-              style: const TextStyle(color: Colors.black45),
+              style: const TextStyle(color: Colors.black45,fontSize: 12),
               overflow: TextOverflow.ellipsis),
         ],
       ),
