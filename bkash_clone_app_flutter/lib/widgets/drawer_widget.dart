@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../styles/AppTheme.dart';
+import 'common_rounded_button_widget.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({
@@ -18,14 +19,15 @@ class DrawerWidget extends StatelessWidget {
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
+            DrawerHeader(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-              Text("bKash Menu", style: AppTheme.titleText, textAlign: TextAlign.start,),
-              SizedBox(height: 8,),
-              Text("Language - English", style: AppTheme.subtitleText, textAlign: TextAlign.start,)
+              const Text("bKash Menu", style: AppTheme.titleText, textAlign: TextAlign.start,),
+              const SizedBox(height: 32,),
+                CommonRoundedButton(buttonLabel: 'বাংলা',onPressed: (){},),
+             // const Text("Language - English", style: AppTheme.subtitleText, textAlign: TextAlign.start,)
             ],),
           ),
           Container(
@@ -163,3 +165,4 @@ class DrawerWidget extends StatelessWidget {
     );
   }
 }
+
