@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/contact.dart';
+import '../pages/barcode_scanner_page.dart';
 import '../styles/AppTheme.dart';
 import 'cashout_contacts_widget.dart';
 import 'common_rounded_button_widget.dart';
@@ -85,8 +86,29 @@ class _AgentWidgetState extends State<AgentWidget> {
                     padding: const EdgeInsets.fromLTRB(50,8.0,50,8),
                     child: SizedBox(
                       width: 300,
-                        child: CommonRoundedButton(buttonLabel: 'Tap To Scan QR Code',onPressed: (){},iconVisible: true,)),
+                        child: CommonRoundedButton(buttonLabel: 'Tap To Scan QR Code',onPressed: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const ScannerPage(title: 'Cash Out',)),
+                          );
+                        },iconVisible: true,)),
                   )
+                ],
+              ),
+            ),
+            const Card(
+              color: Colors.white,
+              //margin: const EdgeInsets.all(12),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+
+                  Icon(Icons.send_to_mobile,size: 25,color: Colors.pink,),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(8.0,20,8,20),
+                    child: Text('Tap to Cash Out at Tk 14.90 per thousand',style: TextStyle(color: Colors.pink,fontSize: 14),),
+                  )
+
                 ],
               ),
             ),

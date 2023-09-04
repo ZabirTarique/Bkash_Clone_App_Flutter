@@ -9,7 +9,7 @@ class CommonRoundedButton extends StatelessWidget {
   });
 
   final String? buttonLabel;
-  final GestureTapCallback? onPressed;
+  final Function? onPressed;
   final bool? iconVisible;
 
   @override
@@ -25,7 +25,7 @@ class CommonRoundedButton extends StatelessWidget {
               )
           )
       ),
-      onPressed: () => onPressed,
+      onPressed: () {onPressed!();} ,
       child:  Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

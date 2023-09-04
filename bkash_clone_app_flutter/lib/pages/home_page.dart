@@ -4,6 +4,7 @@ import 'package:barcode_scan2/model/scan_options.dart';
 import 'package:barcode_scan2/platform_wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'barcode_scanner_page.dart';
 import '../widgets/bottom_bar_widget.dart';
 import '../widgets/drawer_widget.dart';
 import '../widgets/home_body_widget.dart';
@@ -45,6 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     scanResult = scanResult;
     return Scaffold(
+
       /*appBar: const PreferredSize(
         preferredSize: Size.fromHeight(80.0),
         child: AppBarWidget(),
@@ -55,7 +57,12 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Scan QR',
         elevation: 2.0,
         backgroundColor: Colors.white,
-        onPressed: () { _scan(); },
+        //onPressed: () { _scan(); },
+        onPressed: () {
+          Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const ScannerPage(title: 'Scan QR',)),
+        );},
         child: const Icon(Icons.qr_code, color: Colors.pink, size: 40.0),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
