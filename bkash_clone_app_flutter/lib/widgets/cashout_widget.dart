@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/notifications_widget.dart';
 import '../widgets/transactions_widget.dart';
 import 'agent_widget.dart';
+import 'atm_widget.dart';
 
 class CashOutWidget extends StatefulWidget {
   const CashOutWidget({Key? key}) : super(key: key);
@@ -63,7 +64,7 @@ class _CashOutWidgetState extends State<CashOutWidget> {
         body: const TabBarView(
           children: [
             AgentWidget(),
-            TransactionWidget(),
+            ATMWidget(),
           ],
         ),
       ),

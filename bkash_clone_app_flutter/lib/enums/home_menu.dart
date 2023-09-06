@@ -3,7 +3,9 @@ import 'package:bkash_clone_app_flutter/widgets/cashout_widget.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../styles/AppText.dart';
+import '../widgets/add_money_widget.dart';
 import '../widgets/mobile_recharge_widget.dart';
+import '../widgets/payment_widget.dart';
 import '../widgets/send_money_widget.dart';
 
 enum HomeMenu {
@@ -11,9 +13,9 @@ enum HomeMenu {
   sendMoney('Send Money', 'assets/send_money.jpg', SendMoneyWidget()),
   mobileRecharge('Mobile Recharge', 'assets/mobile_recharge.jpg',MobileRechargeWidget()),   //, Text(AppText.placeholder)
   cashOut('Cash Out', 'assets/cash_out.jpg', CashOutWidget()),
-  payment('Payment', 'assets/make_payment.jpg', Text(AppText.placeholder)),
+  payment('Payment', 'assets/make_payment.jpg', PaymentWidget()),
 
-  addMoney('Add Money', 'assets/add_money.jpg', Text(AppText.placeholder)),
+  addMoney('Add Money', 'assets/add_money.jpg', AddMoneyWidget()),
   payBill('Pay Bill', 'assets/pay_bill.jpg', Text(AppText.placeholder)),
   tickets('Tickets', 'assets/tickets.jpg', Text(AppText.placeholder)),
   more('More', 'assets/more.jpg', Text(AppText.placeholder)),
