@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../models/contact.dart';
 import '../pages/amount_page.dart';
+import '../pages/bank_to_bkash_page.dart';
 import '../pages/barcode_scanner_page.dart';
 import '../styles/AppTheme.dart';
 import 'cashout_contacts_widget.dart';
@@ -22,6 +23,15 @@ class _AddMoneyWidgetState extends State<AddMoneyWidget> {
   final List<AppContact> item = [
     AppContact(cId: "0", cImage: "assets/bank_to_bkash.png", cType: "Recents", cNumber: "01123456789", cName: "Bank to bKash"),
     AppContact(cId: "0", cImage: "assets/card_to_bkash.png", cType: "Recents", cNumber: "01123456789", cName: "Card to bKash"),
+  ];
+  final List<AppContact> bankToBkash = [
+    AppContact(cId: "0", cImage: "assets/bank-account.png", cType: "Bank to bKash", cNumber: "01123456789", cName: "Bank Account"),
+    AppContact(cId: "0", cImage: "assets/internet-banking.png", cType: "Bank to bKash", cNumber: "01123456789", cName: "Internet Banking"),
+  ];
+
+  final List<AppContact> cardToBkash = [
+    AppContact(cId: "0", cImage: "assets/master-card.png", cType: "Card to bKash", cNumber: "01123456789", cName: "Mastercard"),
+    AppContact(cId: "0", cImage: "assets/visa-card.png", cType: "Card to bKash", cNumber: "01123456789", cName: "VISA"),
   ];
 
   @override
@@ -43,10 +53,18 @@ class _AddMoneyWidgetState extends State<AddMoneyWidget> {
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => const AmountPage(menu: HomeMenu.sendMoney,)),
-                    // );
+                    if(index == 0){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>  BankToBkashWidget(items: bankToBkash)),
+                      );
+                    }else{
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>  BankToBkashWidget(items: cardToBkash)),
+                      );
+                    }
+
                   },
                   child: Card(
                     margin: const EdgeInsets.all(12.0),
