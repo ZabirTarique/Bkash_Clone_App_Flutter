@@ -1,6 +1,7 @@
-
 import 'package:flutter/material.dart';
 
+import '../pages/reward_page.dart';
+import '../pages/reward_page.dart';
 
 class AppBarWidget extends StatefulWidget {
   const AppBarWidget({
@@ -9,11 +10,10 @@ class AppBarWidget extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() => AppBarWidgetState();
-
 }
 
 class AppBarWidgetState extends State<AppBarWidget> {
-  final GlobalKey<AppBarWidgetState> appBarKey =  GlobalKey<AppBarWidgetState>();
+  final GlobalKey<AppBarWidgetState> appBarKey = GlobalKey<AppBarWidgetState>();
   bool _isAnimation = false;
   bool _isBalanceShown = false;
   bool _isBalance = true;
@@ -45,10 +45,7 @@ class AppBarWidgetState extends State<AppBarWidget> {
                   //User Name
                   const Text(
                     ' K.M. Zabir Tarique',
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w300),
+                    style: TextStyle(fontSize: 15, color: Colors.white, fontWeight: FontWeight.w300),
                   ),
                   const SizedBox(
                     height: 5,
@@ -60,25 +57,19 @@ class AppBarWidgetState extends State<AppBarWidget> {
                       child: Container(
                           width: 160,
                           height: 28,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(50)),
+                          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(50)),
                           child: Stack(alignment: Alignment.center, children: [
                             //Amount
                             AnimatedOpacity(
                                 opacity: _isBalanceShown ? 1 : 0,
                                 duration: const Duration(milliseconds: 500),
-                                child: const Text('৳ 7500.25',
-                                    style: TextStyle(
-                                        color: Colors.pink, fontSize: 14))),
+                                child: const Text('৳ 7500.25', style: TextStyle(color: Colors.pink, fontSize: 14))),
 
                             //Balance
                             AnimatedOpacity(
                                 opacity: _isBalance ? 1 : 0,
                                 duration: const Duration(milliseconds: 300),
-                                child: const Text('Tap for balance',
-                                    style: TextStyle(
-                                        color: Colors.pink, fontSize: 14))),
+                                child: const Text('Tap for balance', style: TextStyle(color: Colors.pink, fontSize: 14))),
 
                             //Circle
                             AnimatedPositioned(
@@ -90,14 +81,8 @@ class AppBarWidgetState extends State<AppBarWidget> {
                                     width: 20,
                                     // padding: const EdgeInsets.only(bottom: 4),
                                     alignment: Alignment.center,
-                                    decoration: BoxDecoration(
-                                        color: Colors.pink,
-                                        borderRadius: BorderRadius.circular(50)),
-                                    child: const FittedBox(
-                                        child: Text('৳',
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 17)))))
+                                    decoration: BoxDecoration(color: Colors.pink, borderRadius: BorderRadius.circular(50)),
+                                    child: const FittedBox(child: Text('৳', style: TextStyle(color: Colors.white, fontSize: 17)))))
                           ])))
                 ],
               ),
@@ -108,13 +93,22 @@ class AppBarWidgetState extends State<AppBarWidget> {
       actions: [
         Padding(
           padding: const EdgeInsets.only(top: 12.0, right: 12.0),
-          child: InkWell(onTap:  Scaffold.of(context).openEndDrawer, child: SizedBox(
-              width: 34, height: 34, child: Image.asset('assets/rewards.png')),),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const RewardPage()),
+              );
+            },
+            child: SizedBox(width: 34, height: 34, child: Image.asset('assets/rewards.png')),
+          ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 12.0, right: 12.0),
-          child: InkWell(onTap:  Scaffold.of(context).openEndDrawer, child: SizedBox(
-              width: 34, height: 34, child: Image.asset('assets/logo.png')),),
+          child: InkWell(
+            onTap: Scaffold.of(context).openEndDrawer,
+            child: SizedBox(width: 34, height: 34, child: Image.asset('assets/logo.png')),
+          ),
         )
       ],
     );
@@ -125,14 +119,9 @@ class AppBarWidgetState extends State<AppBarWidget> {
     _isBalance = false;
     setState(() {});
 
-    await Future.delayed(const Duration(milliseconds: 800),
-            () => setState(() => _isBalanceShown = true));
-    await Future.delayed(
-        const Duration(seconds: 3), () => setState(() => _isBalanceShown = false));
-    await Future.delayed(const Duration(milliseconds: 200),
-            () => setState(() => _isAnimation = false));
-    await Future.delayed(
-        const Duration(milliseconds: 800), () => setState(() => _isBalance = true));
+    await Future.delayed(const Duration(milliseconds: 800), () => setState(() => _isBalanceShown = true));
+    await Future.delayed(const Duration(seconds: 3), () => setState(() => _isBalanceShown = false));
+    await Future.delayed(const Duration(milliseconds: 200), () => setState(() => _isAnimation = false));
+    await Future.delayed(const Duration(milliseconds: 800), () => setState(() => _isBalance = true));
   }
-
 }
