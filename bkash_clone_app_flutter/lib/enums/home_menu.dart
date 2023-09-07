@@ -1,10 +1,10 @@
 
 import 'package:bkash_clone_app_flutter/widgets/cashout_widget.dart';
 import 'package:flutter/cupertino.dart';
-
 import '../styles/AppText.dart';
 import '../widgets/add_money_widget.dart';
 import '../widgets/mobile_recharge_widget.dart';
+import '../widgets/pay-bill_widget.dart';
 import '../widgets/payment_widget.dart';
 import '../widgets/send_money_widget.dart';
 
@@ -16,13 +16,13 @@ enum HomeMenu {
   payment('Payment', 'assets/make_payment.jpg', PaymentWidget()),
 
   addMoney('Add Money', 'assets/add_money.jpg', AddMoneyWidget()),
-  payBill('Pay Bill', 'assets/pay_bill.jpg', Text(AppText.placeholder)),
+  payBill('Pay Bill', 'assets/pay_bill.jpg', PayBillWidget()),
   tickets('Tickets', 'assets/tickets.jpg', Text(AppText.placeholder)),
   more('More', 'assets/more.jpg', Text(AppText.placeholder)),
 
   //my bKash
   topUps('K.M. Zabir Tarique', 'assets/mobile_recharge.jpg', Text(AppText.placeholder)),
-  shwapno('Shwapno', 'assets/make_payment.jpg', Text(AppText.placeholder)),
+  shwapno('Shwapno', 'assets/make_payment.jpg', PaymentWidget()),
   internet('Internet', 'assets/pay_bill.jpg', Text(AppText.placeholder)),
   card('Card', 'assets/add_money.jpg', Text(AppText.placeholder)),
   account('My Account', 'assets/mobile_recharge.jpg', Text(AppText.placeholder)),
