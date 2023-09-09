@@ -193,7 +193,7 @@ class _PayBillWidgetState extends State<PayBillWidget> {
                     Card(
                      // margin: const EdgeInsets.all(12.0),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(5.0),
                         child: Row(
                           children: [
                             Image.asset(
@@ -220,7 +220,7 @@ class _PayBillWidgetState extends State<PayBillWidget> {
                     Card(
                       //margin: const EdgeInsets.all(12.0),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(5.0),
                         child: Row(
                           children: [
                             Image.asset(

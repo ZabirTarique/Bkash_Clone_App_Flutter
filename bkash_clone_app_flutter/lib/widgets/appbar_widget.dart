@@ -21,6 +21,7 @@ class AppBarWidgetState extends State<AppBarWidget> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       key: appBarKey,
       flexibleSpace: SafeArea(
         child: Padding(

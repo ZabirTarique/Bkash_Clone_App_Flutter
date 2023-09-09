@@ -71,7 +71,7 @@ class _RewardPageState extends State<RewardPage> {
                             ),
                           )),
                           Expanded(
-                            flex: 2,
+                            flex: 1,
                               child: SizedBox()),
                           Expanded(
                               flex: 3,
