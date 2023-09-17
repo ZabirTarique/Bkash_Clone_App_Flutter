@@ -160,9 +160,9 @@ class _ConfirmationWidgetState extends State<ConfirmationWidget> {
               Image.asset("assets/user.png", height: 40, width: 40, fit: BoxFit.fitWidth,),
               const SizedBox(width: 12,),
               const Expanded(child: Column(children: [
-                Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("Ryan Reynolds", style: AppTheme.ntitleText, textAlign: TextAlign.start,),)),
+                Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("K.M. Zabir Tarique", style: AppTheme.ntitleText, textAlign: TextAlign.start,),)),
                 ],),
-                Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("01123456789", style: AppTheme.nbodyText, textAlign: TextAlign.start,),))],),
+                Row(children: [Expanded(child: Padding(padding: EdgeInsets.fromLTRB(0, 2, 0, 2), child: Text("01712345678", style: AppTheme.nbodyText, textAlign: TextAlign.start,),))],),
               ],)),
             ],),),
 

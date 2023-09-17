@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
     super.initState();
     phoneNumberController.text = '+88  01712345678';
 
-    passwordController.text = '<initial value>';
+    passwordController.text = '';
     passwordController.addListener(() {
       setState(() {}); // setState every time text changes
     });
